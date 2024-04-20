@@ -1,28 +1,42 @@
-document.getElementById("dataForm").addEventListener("submit", function(event) {
-  event.preventDefault(); // Prevent default form submission
+const wrapper = document.querySelector(".wrapper"),
+selectBtn = wrapper.querySelector(".select-btn"),
+searchInp = wrapper.querySelector("input"),
+options = wrapper.querySelector(".options");
 
-  // Get form data
-  const formData = new FormData(event.target);
-  const jsonData = {};
+let countries = ["Afghanistan", "Algeria", "Argentina", "Australia", "Bangladesh", "Belgium", "Bhutan",
+                 "Brazil", "Canada", "China", "Denmark", "Ethiopia", "Finland", "France", "Germany",
+                 "Hungary", "Iceland", "India", "Indonesia", "Iran", "Italy", "Japan", "Malaysia",
+                 "Maldives", "Mexico", "Morocco", "Nepal", "Netherlands", "Nigeria", "Norway", "Pakistan",
+                 "Peru", "Russia", "Romania", "South Africa", "Spain", "Sri Lanka", "Sweden", "Switzerland",
+                 "Thailand", "Turkey", "Uganda", "Ukraine", "United States", "United Kingdom", "Vietnam"];
 
-  // Convert form data to JSON
-  formData.forEach((value, key) => {
-      jsonData[key] = value;
-  });
+function addSymptom(selectedSymptom) {
+    options.innerHTML = "";
+    countries.forEach(symptom => {
+        let isSelected = symptom == selectedSymptom ? "selected" : "";
+        let li = `<li onclick="updateName(this)" class="${isSelected}">${symptom}</li>`;
+        options.insertAdjacentHTML("beforeend", li);
+    });
+}
+addSymptom();
 
-  // Send JSON data to server
-  fetch('/submit', {
-      method: 'POST',
-      headers: {
-          'Content-Type': 'application/json'
-      },
-      body: JSON.stringify(jsonData)
-  })
-  .then(response => response.json())
-  .then(data => {
-      console.log(data); // Print server response
-  })
-  .catch(error => {
-      console.error('Error:', error);
-  });
+function updateName(selectedLi) {
+    searchInp.value = "";
+    addSymptom(selectedLi.innerText);
+    wrapper.classList.remove("active");
+    selectBtn.firstElementChild.innerText = selectedLi.innerText;
+}
+
+searchInp.addEventListener("keyup", () => {
+    let arr = [];
+    let searchWord = searchInp.value.toLowerCase();
+    arr = countries.filter(data => {
+        return data.toLowerCase().includes(searchWord);
+    }).map(data => {
+        let isSelected = data == selectBtn.firstElementChild.innerText ? "selected" : "";
+        return `<li onclick="updateName(this)" class="${isSelected}">${data}</li>`;
+    }).join("");
+    options.innerHTML = arr ? arr : `<p style="margin-top: 10px;">Oops! Country not found</p>`;
 });
+
+selectBtn.addEventListener("click", () => wrapper.classList.toggle("active"));
