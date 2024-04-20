@@ -1,0 +1,145 @@
+body {
+    background-color: #F2F0CC;
+    text-align: center;
+  }
+  
+  .text {
+    margin-left: 20%;
+    margin-right: 20%;
+    text-align: center;
+  }
+  
+  footer {
+    width: 100%;
+    align-items: center;
+    left: 0;
+    right: 100%;
+    bottom: 100%;
+  }
+  
+  h1 {
+    font-family: 'Archivo Black', sans-serif;
+    padding-top: 8%;
+    text-align: center;
+  }
+  
+  h2 {
+    font-family: 'Darker Grotesque', sans-serif;
+    font-size: 200%;
+    float: center;
+    background-color: #99BB55;
+    padding: 2%;
+  }
+  
+  h3 {
+    font-family: 'Darker Grotesque', sans-serif;
+    font-size: 200%;
+    font-weight: lighter;
+    text-align: center;
+  }
+  
+  p {
+    font-family: 'Darker Grotesque', sans-serif;
+    font-size: 25px;
+    text-align: center;
+  }
+  
+  .nav {
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    right: 100%;
+    box-shadow: 0px 8px 30px #000000;
+  }
+  
+  ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #1d4c00;
+  }
+  
+  li {
+    font-size: 140%;
+    font-family: 'Darker Grotesque', sans-serif;
+    font-weight: bolder;
+    text-align: center;
+  }
+  
+  li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 30px 50px;
+    text-decoration: none;
+  }
+  
+  li a:hover {
+    background-color: #366410;
+  }
+  
+  .list {
+    font-size: 25px;
+    font-family: 'Darker Grotesque', sans-serif;
+    font-weight: lighter;
+    float: center;
+    text-align: center;
+  }
+  
+  .nav1 {
+    float: right;
+  }
+  
+  .nav2 {
+    float: left;
+  }
+  
+  .quote {
+    background-color: #dfEEAA;
+    margin-left: 20%;
+    margin-right: 20%;
+    padding-top: .5%;
+    padding-bottom: 1%;
+    text-align: center;
+  }
+  
+  .caption {
+    font-family: 'Darker Grotesque', sans-serif;
+    font-size: 15px;
+    font-weight: lighter;
+    text-align: center;
+  }
+  
+  .compost {
+    width: 10%;
+    float: center;
+  }
+  
+  .recycle {
+    width: 15%;
+    float: center;
+  }
+  
+  .logo {
+    padding-top: 10px;
+    padding-left: 20px;
+    width: 170px;
+    float: left;
+  }
+  
+  .h4 {
+    margin-left: 40%;
+    font-family: 'Darker Grotesque', sans-serif;
+    margin-right: 40%;
+    text-align: center;
+    padding: 2%;
+    background-color: #99BB55;
+    font-size: 30px;
+    border-radius: 15px;
+  }
+  
+  h4:hover {
+    background-color: #99BB55;
+  }
