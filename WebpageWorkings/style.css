@@ -1,8 +1,13 @@
 body {
-    background-color: #F2F0CC;
+    background-color: #D0D0FC;
     text-align: center;
   }
   
+.bodyIntro {
+    text-align: right;
+    margin-right: 50%;
+ }
+
   .text {
     margin-left: 20%;
     margin-right: 20%;
@@ -12,22 +17,22 @@ body {
   footer {
     width: 100%;
     align-items: center;
-    left: 0;
-    right: 100%;
     bottom: 100%;
   }
   
   h1 {
     font-family: 'Archivo Black', sans-serif;
-    padding-top: 8%;
+    padding-top:10%;
     text-align: center;
   }
   
   h2 {
     font-family: 'Darker Grotesque', sans-serif;
     font-size: 200%;
-    float: center;
-    background-color: #99BB55;
+    margin-left: auto;
+    margin-right: auto;
+    background-color: #a3abc3;
+    border-radius: 25px;
     padding: 2%;
   }
   
@@ -58,7 +63,7 @@ body {
     margin: 0;
     padding: 0;
     overflow: hidden;
-    background-color: #1d4c00;
+    background-color: #24308d;
   }
   
   li {
@@ -77,7 +82,7 @@ body {
   }
   
   li a:hover {
-    background-color: #366410;
+    background-color: #2f3988;
   }
   
   .list {
@@ -89,7 +94,7 @@ body {
   }
   
   .nav1 {
-    float: right;
+    float: center;
   }
   
   .nav2 {
@@ -110,16 +115,6 @@ body {
     font-size: 15px;
     font-weight: lighter;
     text-align: center;
-  }
-  
-  .compost {
-    width: 10%;
-    float: center;
-  }
-  
-  .recycle {
-    width: 15%;
-    float: center;
   }
   
   .logo {
