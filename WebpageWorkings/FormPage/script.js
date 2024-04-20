@@ -3,7 +3,7 @@ selectBtn = wrapper.querySelector(".select-btn"),
 searchInp = wrapper.querySelector("input"),
 options = wrapper.querySelector(".options");
 
-let countries = ["Afghanistan", "Algeria", "Argentina", "Australia", "Bangladesh", "Belgium", "Bhutan",
+let symptoms = ["Afghanistan", "Algeria", "Argentina", "Australia", "Bangladesh", "Belgium", "Bhutan",
                  "Brazil", "Canada", "China", "Denmark", "Ethiopia", "Finland", "France", "Germany",
                  "Hungary", "Iceland", "India", "Indonesia", "Iran", "Italy", "Japan", "Malaysia",
                  "Maldives", "Mexico", "Morocco", "Nepal", "Netherlands", "Nigeria", "Norway", "Pakistan",
@@ -12,7 +12,7 @@ let countries = ["Afghanistan", "Algeria", "Argentina", "Australia", "Bangladesh
 
 function addSymptom(selectedSymptom) {
     options.innerHTML = "";
-    countries.forEach(symptom => {
+    symptoms.forEach(symptom => {
         let isSelected = symptom == selectedSymptom ? "selected" : "";
         let li = `<li onclick="updateName(this)" class="${isSelected}">${symptom}</li>`;
         options.insertAdjacentHTML("beforeend", li);
@@ -30,7 +30,7 @@ function updateName(selectedLi) {
 searchInp.addEventListener("keyup", () => {
     let arr = [];
     let searchWord = searchInp.value.toLowerCase();
-    arr = countries.filter(data => {
+    arr = symptoms.filter(data => {
         return data.toLowerCase().includes(searchWord);
     }).map(data => {
         let isSelected = data == selectBtn.firstElementChild.innerText ? "selected" : "";
