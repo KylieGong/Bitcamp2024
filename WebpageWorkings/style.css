@@ -122,10 +122,6 @@ button {
     float: center;
   }
   
-  .nav2 {
-    float: left;
-  }
-  
   .quote {
     background-color: #dfEEAA;
     margin-left: 20%;
@@ -143,10 +139,9 @@ button {
   }
   
   .logo {
-    padding-top: 10px;
-    padding-left: 20px;
     width: 170px;
-    float: left;
+    scale: 0.5;
+    float: center;
   }
   
   .h4 {
