@@ -31,7 +31,7 @@ body {
     font-size: 200%;
     margin-left: auto;
     margin-right: auto;
-    background-color: #99BB55;
+    background-color: #efbfe6;
     border-radius: 25px;
     padding: 2%;
   }
@@ -63,7 +63,7 @@ body {
     margin: 0;
     padding: 0;
     overflow: hidden;
-    background-color: #1b2575;
+    background-color: #631b75;
   }
   
   li {
@@ -82,7 +82,7 @@ body {
   }
   
   li a:hover {
-    background-color: #7e4c5b;
+    background-color: #24308d;
   }
   
   .list {
