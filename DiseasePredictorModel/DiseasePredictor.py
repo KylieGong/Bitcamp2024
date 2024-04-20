@@ -14,6 +14,12 @@ from sklearn.metrics import classification_report
 # with open("DiseaseData.csv", 'w') as file:
 #     file.writelines(lines)
 
+symptoms = open("WebpageWorkings\FormPage\symptoms.txt", "r").readline()
+symptoms = symptoms.split(",")
+symptoms_dict = {}
+for i in range(len(symptoms)):
+    symptoms_dict[symptoms[i]] = i
+
 data = pd.read_csv("DiseasePredictorModel\DiseaseData.csv")
 
 X = data.drop('prognosis', axis=1)
@@ -24,36 +30,31 @@ X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_
 model = RandomForestClassifier()
 model.fit(X_train, y_train)
 
-y_pred = model.predict(X_test)
-print(classification_report(y_test, y_pred))
+# Tested to make sure the model is well fit
+# y_pred = model.predict(X_test)
+# print(classification_report(y_test, y_pred))
 
-def predict(data, type):
-    if type == "str":
-        data_array = np.array([int(x) for x in data.split(',')])
-        probabilities = model.predict_proba(data_array.reshape(1, -1))
-    elif type == "csv":
-        X = pd.read_csv(data).values
-        probabilities = model.predict_proba(X)
-    elif type == "lst":
-        data_array = np.array(data)
-        probabilities = model.predict_proba(data_array.reshape(1, -1))
+def predict(data):
+    data_array = np.array(data)
+    probabilities = model.predict_proba(data_array.reshape(1, -1))
     
     proba_df = pd.DataFrame(probabilities, columns=model.classes_)
-    top_3_prognosis = proba_df.iloc[0].nlargest(3)
+    top_5_prognosis = proba_df.iloc[0].nlargest(5)
 
-    print("Top 3 prognosis and their probabilities:")
-    print(top_3_prognosis)
+    print("Top 5 prognosis and their probabilities:")
+    print(top_5_prognosis)
 
-# Gastroenteritis
-predict("0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0", "str")
-# Fungal Infection
-predict("DiseasePredictorModel\csvTest.csv", "csv")
+# # Gastroenteritis
+# predict("0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0", "str")
+# # Fungal Infection
+# predict("DiseasePredictorModel\csvTest.csv", "csv")
 
-symptoms = open("WebpageWorkings\FormPage\symptoms.txt", "r").readline()
-symptoms = symptoms.split(",")
-symptoms_dict = {}
-for i in range(len(symptoms)):
-    symptoms_dict[symptoms[i]] = i
+# testarr = [0] * len(symptoms)
+# testarr[symptoms_dict["pain_in_anal_region"]] = 1
+# predict(testarr, "lst")
 
-testarr = [0] * len(symptoms)
-testarr[symptoms_dict["pain_in_anal_region"]] = 1
+def createInput(input):
+    arr = [0] * len(symptoms)
+    for i in input:
+        arr[symptoms_dict[i]] = 1
+    return arr

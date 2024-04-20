@@ -52,7 +52,7 @@ renderSymptoms();
 //Function to write selected symptoms to a file
 submitBtn.addEventListener("click", () => {
     // Send selected symptoms data to Flask server
-    fetch('http://localhost:5000/save_symptoms', { // Update the URL to match your Flask server
+    fetch('http://localhost:5000/analyse_symptoms', { // Update the URL to match your Flask server
         method: 'POST',
         headers: {
             'Content-Type': 'application/json'
