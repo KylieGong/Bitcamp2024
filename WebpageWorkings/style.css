@@ -88,7 +88,7 @@ button {
     margin: 0;
     padding: 0;
     overflow: hidden;
-    background-color: #24308d;
+    background-color: #ea4d4d;
   }
   
   li {
@@ -139,8 +139,10 @@ button {
   }
   
   .logo {
-    width: 170px;
-    scale: 0.5;
+    padding-top: 5px;
+    float: left;
+    width: 80px;
+    scale: 1;
     float: center;
   }
   
