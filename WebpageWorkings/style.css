@@ -45,38 +45,16 @@ button {
     color: white;
 }
 
-.q1 {
-    cursor: pointer;
-    transition-duration: 0.4s;
-    box-shadow: 0px 5px 5px #595656;
-    margin-left: 20%;
-    margin-right: 20%;
-    text-align: center;
-    float: left;
-}
-
-.q1:hover {
-    background-color: #7e8386;
-    color: white;
-}
-
 .text {
     margin-left: 20%;
     margin-right: 20%;
     text-align: center;
-
 }
 
 footer {
     width: 100%;
     align-items: center;
     bottom: 100%;
-}
-
-h1 {
-    font-family: 'Archivo Black', sans-serif;
-    padding-top: 10%;
-    text-align: center;
 }
 
 h2 {
@@ -86,13 +64,6 @@ h2 {
     margin-right: auto;
     box-shadow: 0px 5px 0px #0e1c5e;
     padding: 2%;
-}
-
-h3 {
-    font-family: 'Darker Grotesque', sans-serif;
-    font-size: 200%;
-    font-weight: lighter;
-    text-align: center;
 }
 
 p {
