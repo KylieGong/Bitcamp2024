@@ -13,11 +13,13 @@ body {
     border-left: none;
     border-right: none;
     box-shadow: 0px 1px 1px #0e1c5e;
+    border-radius: 5px;
 }
 
 .boxyay:hover {
     background-color: #eeeeee;
-    color: #999999;
+    color: #ececec;
+    border-radius: 10px;
 }
 
 button {
