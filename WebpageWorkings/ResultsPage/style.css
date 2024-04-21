@@ -1,25 +1,8 @@
 body {
     background-color: #e7ecef;
-    text-align: center;
+    /* text-align: center; */
     padding-top: 180px; 
-    float: center;
-}
-
-.boxyay {
-    padding-top: 5px;
-    text-align: left;
-    width: 40%;
-    padding: 2%;
-    color: #000000;
-    border-top: #000000;
-    border-left: none;
-    border-right: none;
-    box-shadow: 0px 1px 1px #0e1c5e;
-}
-
-.boxyay:hover {
-    background-color: #eeeeee;
-    color: #999999;
+    /* float: center; */
 }
 
 .nav {
