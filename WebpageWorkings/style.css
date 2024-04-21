@@ -17,8 +17,8 @@ body {
 }
 
 .boxyay:hover {
-    background-color: #eeeeee;
-    color: #ececec;
+    background-color: #eeeeee15;
+    color: #ececec15;
     border-radius: 10px;
 }
 
@@ -81,6 +81,7 @@ p {
     left: 0;
     right: 100%;
     box-shadow: 0px 5px 30px #0e1c5e;
+    background-color: #002e88;
 }
 
 ul {
@@ -88,7 +89,6 @@ ul {
     margin: 0;
     padding: 0;
     overflow: hidden;
-    background-color: #002e88;
 }
 
 li {
