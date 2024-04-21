@@ -7,6 +7,49 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
   </head>
   <body>
-    <script src="script.js"></script>
+    <div class="nav">
+      <ul>
+        <a href="..\\HomePage.html">
+          <img class="logo" src="..\\logo.png" alt="Results">
+        </a>
+        <li class="nav1"> <a href="..\\HomePage.html">Results</a> </li>
+      </ul>
+    </div>
+    <table id="resultsTable">
+      <tr>
+        <th>Diagnosis</th>
+        <th>Probability</th>
+      </tr>
+    </table>
+    <script>
+      // Retrieve top3 array from session storage
+      const top3 = JSON.parse(sessionStorage.getItem('top3'));
+    
+      // Get the table element
+      const table = document.getElementById('resultsTable');
+    
+      // Populate the table with data from top3 array
+      top3.forEach(([diagnosis, probability]) => {
+        const row = table.insertRow(); // Insert a new row
+    
+        // Insert cells into the row
+        const diagnosisCell = row.insertCell(0);
+        const probabilityCell = row.insertCell(1);
+    
+        // Set the cell content
+        diagnosisCell.textContent = diagnosis;
+        probabilityCell.textContent = probability;
+    
+        // Check if probability is 1 and add a test sentence
+        if (probability == 1 && diagnosis == "Healthy") {
+          row.insertAdjacentHTML('beforeend', `<td>You are healthy.</td>`);
+          throw BreakException;
+        }
+        else if (probability == 1) {
+          row.insertAdjacentHTML('beforeend', `<td>You have ${diagnosis}.</td>`);
+          throw BreakException;
+        }
+      });
+    </script>
   </body>
 </html>
