@@ -10,12 +10,12 @@
     <div class="nav">
       <ul>
         <a href="..\\HomePage.html">
-          <img class="logo" src="..\\logo.png" alt="Results">
+          <img class="logo" src="..\\logo.png" alt="Health Screening">
         </a>
-        <li class="nav1"> <a href="..\\HomePage.html">Results</a> </li>
+        <li class="nav1"> <a href="..\\HomePage.html">Health Screening</a> </li>
       </ul>
     </div>
-    <table id="resultsTable">
+    <table class="resultsTable" id="resultsTable">
       <tr>
         <th>Diagnosis</th>
         <th>Probability</th>
@@ -40,13 +40,8 @@
         diagnosisCell.textContent = diagnosis;
         probabilityCell.textContent = probability;
     
-        // Check if probability is 1 and add a test sentence
-        if (probability == 1 && diagnosis == "Healthy") {
-          row.insertAdjacentHTML('beforeend', `<td>You are healthy.</td>`);
-          throw BreakException;
-        }
-        else if (probability == 1) {
-          row.insertAdjacentHTML('beforeend', `<td>You have ${diagnosis}.</td>`);
+        // Check if probability is 1
+        if (probability == 1) {
           throw BreakException;
         }
       });

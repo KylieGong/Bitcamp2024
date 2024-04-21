@@ -2,6 +2,7 @@ body {
     background-color: #D0D0FC;
     text-align: center;
     padding-top: 180px; 
+    float: center;
 }
 
 .nav {
@@ -46,4 +47,17 @@ li a:hover {
     width: 80px;
     scale: 1;
     float: center;
+}
+
+.resultsTable {
+    margin-left: auto;
+    margin-right: auto;
+    border-collapse: separate;
+    border-spacing: 10px;
+    text-align: center;
+}
+
+.resultsTable th {
+    padding: 10px;
+    border-bottom: 2px solid black;
 }
