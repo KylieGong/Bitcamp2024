@@ -15,6 +15,13 @@ body {
     background-color: #002e88;
 }
 
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+}
+
 li {
     font-size: 140%;
     font-family: 'Darker Grotesque', sans-serif;
