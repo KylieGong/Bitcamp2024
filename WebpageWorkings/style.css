@@ -2,14 +2,13 @@ body {
     background-color: #D0D0FC;
     text-align: center;
   }
- 
+
 button {
     margin-left: 20%;
     margin-right: 20%;
     text-align: center;
     font-family: 'Darker Grotesque', sans-serif;
     font-size: 150%;
-    border-radius: 50px;
     padding: 2%;
     cursor: pointer;
     transition-duration: 0.4s;
@@ -18,6 +17,7 @@ button {
 
 .button1 {
     background-color: white; 
+    border-radius: 50px;
     color: black; 
     border: 2px solid #0e1c5e;
   }
@@ -34,6 +34,7 @@ button {
     margin-left: 20%;
     margin-right: 20%;
     text-align: center;
+    float: left;
  }
 
  .q1:hover {
