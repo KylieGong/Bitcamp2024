@@ -55,9 +55,11 @@ li a:hover {
     border-collapse: separate;
     border-spacing: 10px;
     text-align: center;
+    scale: 150%;
 }
 
 .resultsTable th {
     padding: 10px;
     border-bottom: 2px solid black;
+    scale: 100%;
 }
