@@ -1,5 +1,5 @@
 body {
-    background-color: #D0D0FC;
+    background-color: #e7ecef;
     text-align: center;
 }
 
@@ -8,11 +8,11 @@ body {
     text-align: left;
     width: 40%;
     padding: 2%;
-    color: #111111;
+    color: #000000;
     border-top: #000000;
     border-left: none;
     border-right: none;
-    box-shadow: 0px 1px 1px #595656;
+    box-shadow: 0px 1px 1px #0e1c5e;
 }
 
 .boxyay:hover {
@@ -22,6 +22,7 @@ body {
 
 button {
     margin-left: 20%;
+    width: 30%;
     margin-right: 20%;
     text-align: center;
     font-family: 'Darker Grotesque', sans-serif;
@@ -29,7 +30,7 @@ button {
     padding: 2%;
     cursor: pointer;
     transition-duration: 0.4s;
-    box-shadow: 0px 5px 5px #595656;
+    box-shadow: 0px 5px 5px #0e1c5e;
 }
 
 .button1 {
@@ -40,7 +41,7 @@ button {
 }
 
 .button1:hover {
-    background-color: #1e4f75;
+    background-color: #0071d1;
     color: white;
 }
 
@@ -80,11 +81,10 @@ h1 {
 
 h2 {
     font-family: 'Darker Grotesque', sans-serif;
-    font-size: 200%;
+    font-size: 250%;
     margin-left: auto;
     margin-right: auto;
-    background-color: #a3abc3;
-    border-radius: 10px;
+    box-shadow: 0px 5px 0px #0e1c5e;
     padding: 2%;
 }
 
@@ -107,7 +107,7 @@ p {
     top: 0;
     left: 0;
     right: 100%;
-    box-shadow: 0px 5px 30px #000000;
+    box-shadow: 0px 5px 30px #0e1c5e;
 }
 
 ul {
@@ -115,7 +115,7 @@ ul {
     margin: 0;
     padding: 0;
     overflow: hidden;
-    background-color: #ea4d4d;
+    background-color: #002e88;
 }
 
 li {
@@ -128,13 +128,13 @@ li {
 li a {
     display: block;
     color: white;
-    text-align: center;
+    text-align: left;
     padding: 30px 50px;
     text-decoration: none;
 }
 
 li a:hover {
-    background-color: #2f3988;
+    background-color: #005cbb;
 }
 
 .list {
@@ -147,15 +147,6 @@ li a:hover {
 
 .nav1 {
     float: center;
-}
-
-.quote {
-    background-color: #dfEEAA;
-    margin-left: 20%;
-    margin-right: 20%;
-    padding-top: .5%;
-    padding-bottom: 1%;
-    text-align: center;
 }
 
 .caption {
@@ -171,19 +162,4 @@ li a:hover {
     width: 80px;
     scale: 1;
     float: center;
-}
-
-.h4 {
-    margin-left: 40%;
-    font-family: 'Darker Grotesque', sans-serif;
-    margin-right: 40%;
-    text-align: center;
-    padding: 2%;
-    background-color: #99BB55;
-    font-size: 30px;
-    border-radius: 15px;
-}
-
-h4:hover {
-    background-color: #99BB55;
 }
