@@ -1,8 +1,25 @@
 body {
-    background-color: #D0D0FC;
+    background-color: #e7ecef;
     text-align: center;
     padding-top: 180px; 
     float: center;
+}
+
+.boxyay {
+    padding-top: 5px;
+    text-align: left;
+    width: 40%;
+    padding: 2%;
+    color: #000000;
+    border-top: #000000;
+    border-left: none;
+    border-right: none;
+    box-shadow: 0px 1px 1px #0e1c5e;
+}
+
+.boxyay:hover {
+    background-color: #eeeeee;
+    color: #999999;
 }
 
 .nav {
@@ -11,7 +28,7 @@ body {
     top: 0;
     left: 0;
     right: 100%;
-    box-shadow: 0px 5px 30px #000000;
+    box-shadow: 0px 5px 30px #0e1c5e;
 }
 
 ul {
@@ -19,7 +36,7 @@ ul {
     margin: 0;
     padding: 0;
     overflow: hidden;
-    background-color: #f75757;
+    background-color: #002e88;
 }
 
 li {
@@ -32,13 +49,13 @@ li {
 li a {
     display: block;
     color: white;
-    text-align: center;
+    text-align: left;
     padding: 30px 50px;
     text-decoration: none;
 }
 
 li a:hover {
-    background-color: #eb8989;
+    background-color: #005cbb;
 }
 
 .logo {
