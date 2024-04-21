@@ -17,30 +17,21 @@
     </div>
     <table class="resultsTable" id="resultsTable">
       <tr>
-        <th>Diagnosis</th>
+        <th>Prognosis</th>
         <th>Probability</th>
       </tr>
     </table>
     <script>
-      // Retrieve top3 array from session storage
       const top3 = JSON.parse(sessionStorage.getItem('top3'));
-    
-      // Get the table element
       const table = document.getElementById('resultsTable');
-    
-      // Populate the table with data from top3 array
       top3.forEach(([diagnosis, probability]) => {
-        const row = table.insertRow(); // Insert a new row
-    
-        // Insert cells into the row
+        const row = table.insertRow();
         const diagnosisCell = row.insertCell(0);
         const probabilityCell = row.insertCell(1);
-    
-        // Set the cell content
+
         diagnosisCell.textContent = diagnosis;
         probabilityCell.textContent = probability;
     
-        // Check if probability is 1
         if (probability == 1) {
           throw BreakException;
         }
