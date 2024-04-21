@@ -2,15 +2,14 @@ body {
     background-color: #D0D0FC;
     text-align: center;
   }
- 
+
 button {
     margin-left: 20%;
     margin-right: 20%;
     text-align: center;
     font-family: 'Darker Grotesque', sans-serif;
     font-size: 150%;
-    border-radius: 50px;
-    padding: 3%;
+    padding: 2%;
     cursor: pointer;
     transition-duration: 0.4s;
     box-shadow: 0px 5px 5px #595656;
@@ -18,6 +17,7 @@ button {
 
 .button1 {
     background-color: white; 
+    border-radius: 50px;
     color: black; 
     border: 2px solid #0e1c5e;
   }
@@ -28,9 +28,19 @@ button {
   }
 
 .q1 {
-    border-bottom: #000000;
-    border-bottom-width: 1%;
+    cursor: pointer;
+    transition-duration: 0.4s;
+    box-shadow: 0px 5px 5px #595656;
+    margin-left: 20%;
+    margin-right: 20%;
+    text-align: center;
+    float: left;
  }
+
+ .q1:hover {
+    background-color: #7e8386;
+    color: white;
+  }
 
   .text {
     margin-left: 20%;
