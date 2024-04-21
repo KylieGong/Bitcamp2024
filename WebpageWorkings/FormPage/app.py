@@ -13,7 +13,8 @@ CORS(app)  # Enable CORS for all routes
 def analyse_symptoms():
     data = request.json
     symptoms = dp.createInput(data['selectedSymptoms'])
-    dp.predict(symptoms)
-    return jsonify({'message': 'Symptoms submitted'})
+    pred = dp.predict(symptoms)
+    pred = str(pred)
+    return jsonify({'message': pred})
 if __name__ == '__main__':
     app.run(debug=True)

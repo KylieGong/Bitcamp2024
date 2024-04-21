@@ -39,10 +39,9 @@ def predict(data):
     probabilities = model.predict_proba(data_array.reshape(1, -1))
     
     proba_df = pd.DataFrame(probabilities, columns=model.classes_)
-    top_5_prognosis = proba_df.iloc[0].nlargest(5)
+    top_3 = proba_df.iloc[0].nlargest(3)
 
-    print("Top 5 prognosis and their probabilities:")
-    print(top_5_prognosis)
+    return top_3
 
 # # Gastroenteritis
 # predict("0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0", "str")
