@@ -76,7 +76,9 @@ submitBtn.addEventListener("click", () => {
                 console.log("DONE");
             }
         });
-        console.log(top3);
+        sessionStorage.setItem('top3', JSON.stringify(top3));
+        window.location.href = "..\\ResultsPage\\ResultsPage.html";
+        // console.log(top3);
     })
     .catch(error => {
         console.error('Error analysing symptoms:', error);
